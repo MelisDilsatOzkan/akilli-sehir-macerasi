@@ -14,7 +14,7 @@ public class Destroy : MonoBehaviour
     public TextMeshProUGUI trashText;
 
    
-    public int totalTrash = 17; // Toplam coin sayýsý
+    public int totalTrash = 17; // Toplam trash sayýsý
 
     void OnTriggerEnter(Collider other)
     {
@@ -22,13 +22,13 @@ public class Destroy : MonoBehaviour
         {
             
             // Trash toplama iþlemleri
-            Destroy(other.gameObject); // Trash'i yok edin veya devre dýþý býrakýn
+            Destroy(other.gameObject); // Trash'i yok et veya devredýþý yap
             Trash++;
             trashText.text = "Trash:" + Trash.ToString();
             Debug.Log(Trash);
             if (Trash >= totalTrash)
             {
-                // Eðer toplam coin sayýsýna ulaþýldýysa yeni sahneye geç
+                // Eðer toplam trash sayýsýna ulaþýldýysa yeni sahneye geç
                 SceneManager.LoadScene("Game2");
             }
             }

@@ -8,7 +8,7 @@ public class Buttons : MonoBehaviour
 {
     public void ExitButton()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
     public void Game1()
     {
